@@ -22,7 +22,7 @@ RSpec.describe "mechanics show page" do
   it "displays mechanic's info" do
     visit "/mechanics/#{@mechanic_1.id}"
     expect(page).to have_content("Mechanic: Sam Mills")
-    expect(page).to have_content("11 years of experience")
+    expect(page).to have_content("10 years of experience")
     expect(page).to have_content("Lightning Racer")
     expect(page).to have_content("Storm Runner")
     expect(page).to have_content("The Great Bear")
@@ -34,7 +34,7 @@ RSpec.describe "mechanics show page" do
 
     visit "/mechanics/#{@mechanic_1.id}"
 
-    fill_in "Ride ID #", with: "#{new_ride.id}"
+    fill_in "Ride ID #:", with: "#{new_ride.id}"
     click_on "Submit"
 
     expect(page).to have_current_path("/mechanics/#{@mechanic_1.id}")
