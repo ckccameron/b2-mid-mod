@@ -22,8 +22,8 @@ RSpec.describe "amusement parks show page" do
   it "displays amusement park rides in alphabetical order" do
     visit "/amusement_parks/#{@hershey_park.id}"
     expect(page).to have_content("Check Out The Rides")
-    # ("Lightning Racer").appears_before("Storm Runner", only_text: true)
-    # ("Storm Runner").appears_before("The Great Bear", only_text: true)
+    # expect("Lightning Racer").to appear_before("Storm Runner", only_text: true)
+    # expect("Storm Runner").to appear_before("The Great Bear", only_text: true)
   end
 
   it "displays average thrill rating of all rides at the park" do
