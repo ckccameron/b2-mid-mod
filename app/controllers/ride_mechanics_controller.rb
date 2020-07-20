@@ -1,5 +1,5 @@
 class RideMechanicsController < ApplicationController
-  def new
+  def create
     ride = Ride.find(params[:ride_id])
     mechanic = Mechanic.find(params[:mechanic_id])
     ride_mechanic = RideMechanic.create(ride: ride, mechanic: mechanic)
