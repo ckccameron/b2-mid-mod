@@ -18,6 +18,9 @@ RSpec.describe AmusementPark do
                                             thrill_rating: 7)
 
       expect(hershey_park.sort_rides_alphabetically).to eq([ride_1, ride_2, ride_3])
+      # expect(hershey_park.sort_rides_alphabetically[0]).to eq(ride_1)
+      # expect(hershey_park.sort_rides_alphabetically[1]).to eq(ride_2)
+      # expect(hershey_park.sort_rides_alphabetically[2]).to eq(ride_3)
     end
 
     it "#avg_thrill_rating" do
